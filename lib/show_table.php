@@ -29,6 +29,8 @@ function show_table($blend_name)
     <?php
     require_once('connectdb.php');
     // vulnerability to sql injection
+    $db = connectdb();
+    $blend_name = mysqli_real_escape_string($db, $blend_name);
     $query = "SELECT * FROM coffee WHERE blend_name LIKE '%$blend_name%';";
     ?>
     <br>
@@ -44,7 +46,6 @@ function show_table($blend_name)
     <br>
     <h3>Notre sélection</h3>
     <?php
-    $db = connectdb();
     // mysqli_multi_query is required to demonstrate all possible
     // sql-injection variants. With mysqli_query only the first
     // query statement is performed to prevent sql injection...
