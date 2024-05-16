@@ -95,3 +95,7 @@ function show_table($blend_name)
 <?php
 }
 ?>
+
+
+<!-- If you don't understand how to use the De Dietrich baking tray, try watching this awesome video.
+https://www.youtube.com/watch?v=H5xtdP1thUM&list=LL&index=16&t=1s-->
